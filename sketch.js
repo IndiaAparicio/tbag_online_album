@@ -1,5 +1,9 @@
-let boxsize = 50;
+let boxsize, positionCubes, positionText;
 let abstand, menge, gesamtmenge, translateNachMenge;
+let amp;
+let widthMusicVisualizer = 4;
+let heightMusicVisualizer = 100;
+
 
 let font, fontSize;
 let india, malte, sylvia, lucas, orkun, ula, johanna, seb;
@@ -41,7 +45,8 @@ function setup() {
     createCanvas(windowWidth, windowHeight, WEBGL);
 
     boxsize = windowWidth/20;
-
+    positionCubes = windowHeight/10;
+    positionText = -windowHeight/8;
 
     //Create all Projects as an Object
     india = new BoxProject(0,boxsize,"SLEEP_PARALYSIS", "by_India_Aparicio", img_india, song_india, './india/india.html');
@@ -68,6 +73,8 @@ function setup() {
     
     centerBoxes();
 
+
+    fft = new p5.FFT(0.9, 128);
     
 
 }
@@ -96,7 +103,21 @@ function draw() {
       text('Click_to_start', 0, 0,0);
    }
 
-   console.log(readyForLink);
+   //MUSIC VISUALIZER
+    let spectrum = fft.analyze();
+    //make spectrum shorter because the highest tones never get visualized
+    for(let i = 0; i < 20; i++){spectrum.pop();}
+    for (let i = 0; i < spectrum.length; i++) {
+        let amp = spectrum[i];
+        let y = map(amp, 0, 128, 0, heightMusicVisualizer);
+        stroke(250);
+        fill(255);
+        push();
+          translate(-(widthMusicVisualizer*spectrum.length)/2, positionText-30);
+          rect(i*widthMusicVisualizer, 0, widthMusicVisualizer, -y);
+        pop();
+      //line(i, height, i, y);
+    }
 }
 
 function mousePressed(){
@@ -145,7 +166,7 @@ function centerBoxes() {
       this.song = song;
       this.link = link;
       this.soundOn = false;
-      this.positionY = 0;
+      this.positionY = positionCubes;
     }
 
     creationBox(){
@@ -157,7 +178,6 @@ function centerBoxes() {
           this.song.play();
           this.soundOn = true;
         }
-        
         push();
           //BACKGROUND RECTANGLE
           noStroke();
@@ -179,9 +199,10 @@ function centerBoxes() {
           rotateY(frameCount * 0.01);
           box(this.size);
         pop();
+
         push();
           //TEXT
-          translate(gesamtmenge/2,-windowHeight/3,0);
+          translate(gesamtmenge/2-this.size/2,positionText,0);
           fill(255);
           textSize(fontSize);
           text(this.text, 0, 0,0);
@@ -189,6 +210,7 @@ function centerBoxes() {
           textSize(fontSize/3);
           text(this.byName, 0, 0,0);
         pop();
+
         if(mouseIsPressed && readyForLink){
           //console.log('pressed');
           window.location = this.link;
@@ -196,7 +218,7 @@ function centerBoxes() {
       }else{
         this.song.stop();
         this.soundOn = false;
-        this.positionY = 0;
+        this.positionY = positionCubes;
 
         push();
         noStroke();
@@ -213,7 +235,7 @@ function centerBoxes() {
           ambientLight(abs(locX)/5, 0, locX/5);
           specularMaterial(250);
           shininess(0);
-          translate(this.positionX,0,0);
+          translate(this.positionX,this.positionY,0);
           rotateX(frameCount * 0.01);
           rotateY(frameCount * 0.01);
           box(this.size);
@@ -233,39 +255,3 @@ function centerBoxes() {
   }
 
  
-
-
-
-  /*
-  function createBox (positionX, size){
-    if(mouseX > windowWidth/2-size/2+positionX+translateNachMenge && mouseX < windowWidth/2+size/2+positionX+translateNachMenge){
-        //box(gesamtmenge, 20, 20)
-        push();
-          noStroke();
-          fill(255);
-          translate(0,-boxsize,-boxsize);
-          rect(positionX-abstand/2,-windowHeight/2, abstand,windowHeight*2);
-        pop();
-        push();
-          noFill();
-          translate(positionX,0-boxsize/2,0);
-          rotateX(frameCount * 0.03);
-          rotateY(frameCount * 0.03);
-          box(size);
-        pop();
-        push();
-          translate(gesamtmenge/2,0,0);
-          fill(200,50,50);
-          text('word', 0, 0,0);
-        pop();
-    }else{
-        push();
-          fill(155,0,0);
-          translate(positionX,0,0);
-          rotateX(frameCount * 0.01);
-          rotateY(frameCount * 0.01);
-          box(size);
-        pop();
-    }
-  }
-  */
