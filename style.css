@@ -1,0 +1,73 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif !important;
+  position: relative;
+  overflow-y: scroll; 
+}
+
+body{
+  background-color: black !important;
+  padding: 0vh;
+}
+
+.container {
+  padding-top: 10vh;
+
+  /*margin-right: 10vh !important;*/
+}
+
+#scroll-div{
+  height: 85vh;
+  position: relative;
+  overflow-y: scroll;
+}
+
+nav{
+  position: relative;
+  line-height: 0mm !important;
+}
+
+#cnv-sketch {
+  padding-right: 50vh;
+  z-index: 1;
+}
+
+canvas {
+  position: fixed;
+  z-index: -3 !important;
+}
+
+h1{
+  color: white;
+  padding: 20px,0px;
+}
+h2{
+  color: white;
+  padding: 10px 0px;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+}
+
+h3{
+  color:white;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+
+p {
+  color: white;
+  font-size: 14px;
+}
+
+
+#arrow-back {
+  position: fixed;
+  font-size: 2em;
+  margin-top: -1em;
+  color: white;
+}
+
+#arrow-back:hover {
+  color: blue;
+}
