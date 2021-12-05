@@ -10,30 +10,34 @@ let startWebsite = false;
 let readyForLink = false;
 
 function preload() {
-  font = loadFont('./assets/Montserrat-Black.ttf');
+ //rect(0,0,100,100);
+ font = loadFont('./assets/Montserrat-Black.ttf');
 
-  img_johanna = loadImage('./assets/origamiclouds.png');
-  img_india = loadImage('./assets/origamiclouds.png');
-  img_malte = loadImage('./assets/malte.jpeg');
-  img_seb = loadImage('./assets/origamiclouds.png');
-  img_sylvia = loadImage('./assets/origamiclouds.png');
-  img_lucas = loadImage('./assets/vorschau.png');
-  img_orkun = loadImage('./assets/origamiclouds.png');
-  img_ula = loadImage('./assets/origamiclouds.png');
+ img_johanna = loadImage('./assets/origamiclouds.png');
+ img_india = loadImage('./assets/origamiclouds.png');
+ img_malte = loadImage('./assets/malte.jpeg');
+ img_seb = loadImage('./assets/origamiclouds.png');
+ img_sylvia = loadImage('./assets/origamiclouds.png');
+ img_lucas = loadImage('./assets/vorschau.png');
+ img_orkun = loadImage('./assets/origamiclouds.png');
+ img_ula = loadImage('./assets/origamiclouds.png');
 
-  song_johanna = loadSound('./johanna/a_weird_morning.mp3');
-  song_india = loadSound('./india/img/audio-project-m.mp3');
-  song_malte = loadSound('./malte/malte.mp3');
-  song_seb = loadSound('./seb/resources/winds_of_kyoto.mp3');
-  song_sylvia = loadSound('./sylvia/slyvia.mp3');
-  song_lucas = loadSound('./lucas/audio/ThoughtsInProgress.mp3');
-  song_orkun = loadSound('./johanna/a_weird_morning.mp3');
-  song_ula = loadSound('./johanna/a_weird_morning.mp3');
+ song_johanna = loadSound('./johanna/a_weird_morning.mp3');
+ song_india = loadSound('./india/img/audio-project-m.mp3');
+ song_malte = loadSound('./malte/malte.mp3');
+ song_seb = loadSound('./seb/resources/winds_of_kyoto.mp3');
+ song_sylvia = loadSound('./sylvia/slyvia.mp3');
+ song_lucas = loadSound('./lucas/audio/ThoughtsInProgress.mp3');
+ song_orkun = loadSound('./johanna/a_weird_morning.mp3');
+ song_ula = loadSound('./johanna/a_weird_morning.mp3');
+ 
 }
 
 
 function setup() {
 
+
+  
     createCanvas(windowWidth, windowHeight, WEBGL);
 
     boxsize = windowWidth/20;
