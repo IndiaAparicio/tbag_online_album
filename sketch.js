@@ -187,7 +187,7 @@ function centerBoxes() {
         pop();
         if(mouseIsPressed && readyForLink){
           //console.log('pressed');
-          window.open(this.link)
+          window.location = this.link;
         }
       }else{
         this.song.stop();
