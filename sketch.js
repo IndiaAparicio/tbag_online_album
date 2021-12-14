@@ -23,7 +23,7 @@ function preload() {
  img_seb = loadImage('./assets/seb.png');
  img_sylvia = loadImage('./assets/origamiclouds.png');
  img_lucas = loadImage('./assets/vorschau.png');
- img_orkun = loadImage('./assets/origamiclouds.png');
+ img_orkun = loadImage('./assets/orkun.png');
  img_ula = loadImage('./assets/ula.png');
 
  song_johanna = loadSound('./johanna/a_weird_morning.mp3');
@@ -32,7 +32,7 @@ function preload() {
  song_seb = loadSound('./seb/resources/winds_of_kyoto.mp3');
  song_sylvia = loadSound('./sylvia/slyvia.mp3');
  song_lucas = loadSound('./lucas/audio/ThoughtsInProgress.mp3');
- song_orkun = loadSound('./johanna/a_weird_morning.mp3');
+ song_orkun = loadSound('./orkun/assets/warfare_paradise.mp3');
  song_ula = loadSound('./ula/SWARM.mp3');
  
 }
@@ -54,7 +54,7 @@ function setup() {
     lucas = new BoxProject(0,boxsize,"THOUGHTS_IN_PROGRESS", "by_Lucas_Grey", img_lucas, song_lucas, './lucas/lucas.html');
     ula = new BoxProject(0,boxsize,"SWARM", "by_Ula_Przybylska", img_ula, song_ula, './ula/ula.html');
     sylvia = new BoxProject(0,boxsize,"ALIEN_SWAMP", "by_Sylvia_Rybak", img_sylvia, song_sylvia, './sylvia/sylvia.html');
-    orkun = new BoxProject(0,boxsize,"orkun", "by_Orkun_Aydinli", img_orkun, song_orkun, './orkun/orkun.html');
+    orkun = new BoxProject(0,boxsize,"WARFARE_PARADISE", "by_Orkun_Aydinli", img_orkun, song_orkun, './orkun/orkun.html');
     johanna = new BoxProject(0,boxsize,"A_WEIRD_MORNING", "by_Johanna_Hartmann", img_johanna, song_johanna, './johanna/johanna.html');
     seb = new BoxProject(0,boxsize,"WINDS_OF_KYOTO", "by_Sebastian_Wilhelm",img_seb, song_seb, './seb/seb.html');
 
