@@ -33,39 +33,36 @@
                 <script src = "class.js"></script>
             </div>
             <div id="test-test" class="col-md-4">
-                <h1><b>SLEEP PARALYSIS</b></h1>
+                <h1><b>THOUGHTS_IN_<br>PROGRESS</b></h1>
                           <h2>by_Lucas_Grey</h2>
                           <h3>IDEA</h3>
-                              <p>The idea was to create a graphic that visually supports the already created audio project about sleep paralysis. 
-                                  The graphic project should represent the state between sleep and being awake. Since one cannot move during sleep paralysis, 
-                                  the "being trapped in one's own body" should also be visually represented. To achieve an intense effect, the goal was to 
-                                  link the graphic project and the audio project. </p>
-                          <h3>ARTISTIC INTENTION</h3>
-                              <p>The protagonist of the rather abstract scenery is a small cube, which finds its place in the center of the composition. 
-                                  This cube represents the (sleeping) human being. The cube is always in the center of the picture and is therefore clearly 
-                                  identified as the protagonist. Around the cube are two geometric shapes, which consist exclusively of contours. These shapes 
-                                  are meant to appear as cages that hold the cube captive. They symbolize, on the one hand, the cage of the body, which cannot 
-                                  be moved during a sleep paralysis, and, on the other hand, the mind, which can also cause a feeling of constriction and 
-                                  paranoia through threatening thoughts. These three elements move appropriately to different frequencies of the piece of 
-                                  music. The cube and one of the cages (that of the mind) move appropriately to the low frequencies. These two elements move 
-                                  in the same rhythm to make the common - though still fighting - attempt to rebel against the body. A pulsating effect is 
-                                  created, which is supposed to give rise to a "breaking out" feeling. The antagonist in this game is represented by the 
-                                  outer cage (that of the body). This tends to move to higher frequencies and pulsating inward, so that the cages sometimes 
-                                  overlap. In these moments, it almost seems as if the protagonist is about to wake up and overcome sleep paralysis. Behind 
-                                  these three main elements there is - at first glance - a coherent surface. When moving in three-dimensional space (user 
-                                  interaction), it can be seen that there are several independent surfaces, one behind the other. These surfaces move partly 
-                                  in such a way that they get in front of the cube and into the cages and thus seem to "swallow" the cube. They represent 
-                                  the dream world. It is an oppressive force that wants to drag people back to sleep and has multiple dream levels. At 
-                                  first glance it appears one-dimensional, but closer inspection reveals depths. In addition, the planes are "distorted" 
-                                  by mouse interactions. This effect is meant to refer to the illogical aspects of dreams that often distort reality. The 
-                                  last element of the composition are spheres, which also circle around the cube. They lie outside the cages and are meant 
-                                  to represent reality in a waking state. They are the only round elements of the image and thus are meant to create a soft 
-                                  positive and free effects. </p>
-                          <h3>Technical choices</h3>
-                              <p>The idea was to create a graphic that visually supports the already created audio project about sleep paralysis. 
-                              The graphic project should represent the state between sleep and being awake. Since one cannot move during sleep paralysis, 
-                              the "being trapped in one's own body" should also be visually represented. To achieve an intense effect, the goal was to 
-                              link the graphic project and the audio project. </p>
+                              <p>The Idea behind the project was to shed light on how I think my subjective process of thought and conceptualising is taking place. 
+                                  This should be represented both in a musical and also visual way. At the beginning there is a lot of chaos, disruption and anarchy 
+                                  in mind. No clear thoughts are manifesting. Small ideas rise are beeing processed, rated, compete with each other and most of the 
+                                  time they are  discounted. Doubt comes into play and blocks an effective developement and structuring these rising thoughts 
+                                  and ideas. This process of unease and unsetteledness takes place over a longer period of time and increases its weight. 
+                                  After some time this process gets out of hand and inside of this chaos there are small structured forms visible and they 
+                                  are entangling from within the chaos and start to make sense from the inner core of chaotic cloud.</p>
+                          <h3>Implementation in audio</h3>
+                              <p>The project started in the audio section. The DAW of my choise was ableton. Conceptually I decided to at first only use sounds 
+                                  of my living room, because that is the place where I am at most of the time right now and where my usual thought process is done. 
+                                  The sounds I recorded originated from scraping along my armchair, pushing and pulling boxes from my shelf, hitting against glasses, 
+                                  closing and opening a scissor, books falling down and other things. These sound where then alienated by various chained effect 
+                                  methods in ableton and then put together into a drumrack. For interfering with these thought processes I chose a VST-synthesizer 
+                                  that I wanted to check out for a longer period of time: lyra 8 in combination with a VST-Reverb.
+                                  For the part when everything comes together in harmony I used the VST-Helm-synthesizer with again some reverb and a stepsequencer. </p>
+                          <h3>Visual implementation </h3>
+                              <p>The visual implementation was done in p5. I experimented a lot beforehand with shaders to get a hang of it and to see what 
+                                  I would be able to do with it. I watched some tutorials of shaderToy and worked through the first pages of the book of Shaders 
+                                  as well.  In the end I couldnt get it done the way I wanted to and I chose to not further try because I was way over time.
+                                In p5 I decided to in the direction of using object oriented programming. I build a class which holds a move and a show function for 
+                                displaying and then in the draw function I am building the actual object.
+                                Also there is an array build out of the values of the FFT which is then multiplied onto every vertexpoint to make the whole thing 
+                                audio reactive. There is an odd problem with the FFT in p5 which mainly is about the last values of the fft-array which do not 
+                                contain any value other then "0". This is a bit strange and not very cool in the sense of usabilitym because I had to cut the 
+                                array at a certain point with the for Loop, to make every vertexpoint move. Otherwise some of the vertex points would stand 
+                                still. Additionally there is a check of the overall level of the audio track which is used for additional rotations of the 
+                                object to give it a more disruptive look in movement.</p>
             </div>
 
         </div>

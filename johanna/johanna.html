@@ -34,39 +34,58 @@
                 <script src="./johanna.js"></script>
             </div>
             <div class="col-md-4">
-                  <h1><b>SLEEP PARALYSIS</b></h1>
-                            <h2> Johanna </h2>
-                            <h3>Idea</h3>
-                                <p>The idea was to create a graphic that visually supports the already created audio project about sleep paralysis. 
-                                    The graphic project should represent the state between sleep and being awake. Since one cannot move during sleep paralysis, 
-                                    the "being trapped in one's own body" should also be visually represented. To achieve an intense effect, the goal was to 
-                                    link the graphic project and the audio project. </p>
-                            <h3>Artistic Intention</h3>
-                                <p>The protagonist of the rather abstract scenery is a small cube, which finds its place in the center of the composition. 
-                                    This cube represents the (sleeping) human being. The cube is always in the center of the picture and is therefore clearly 
-                                    identified as the protagonist. Around the cube are two geometric shapes, which consist exclusively of contours. These shapes 
-                                    are meant to appear as cages that hold the cube captive. They symbolize, on the one hand, the cage of the body, which cannot 
-                                    be moved during a sleep paralysis, and, on the other hand, the mind, which can also cause a feeling of constriction and 
-                                    paranoia through threatening thoughts. These three elements move appropriately to different frequencies of the piece of 
-                                    music. The cube and one of the cages (that of the mind) move appropriately to the low frequencies. These two elements move 
-                                    in the same rhythm to make the common - though still fighting - attempt to rebel against the body. A pulsating effect is 
-                                    created, which is supposed to give rise to a "breaking out" feeling. The antagonist in this game is represented by the 
-                                    outer cage (that of the body). This tends to move to higher frequencies and pulsating inward, so that the cages sometimes 
-                                    overlap. In these moments, it almost seems as if the protagonist is about to wake up and overcome sleep paralysis. Behind 
-                                    these three main elements there is - at first glance - a coherent surface. When moving in three-dimensional space (user 
-                                    interaction), it can be seen that there are several independent surfaces, one behind the other. These surfaces move partly 
-                                    in such a way that they get in front of the cube and into the cages and thus seem to "swallow" the cube. They represent 
-                                    the dream world. It is an oppressive force that wants to drag people back to sleep and has multiple dream levels. At 
-                                    first glance it appears one-dimensional, but closer inspection reveals depths. In addition, the planes are "distorted" 
-                                    by mouse interactions. This effect is meant to refer to the illogical aspects of dreams that often distort reality. The 
-                                    last element of the composition are spheres, which also circle around the cube. They lie outside the cages and are meant 
-                                    to represent reality in a waking state. They are the only round elements of the image and thus are meant to create a soft 
-                                    positive and free effects. </p>
-                            <h3>Technical choices</h3>
-                                <p>The idea was to create a graphic that visually supports the already created audio project about sleep paralysis. 
-                                The graphic project should represent the state between sleep and being awake. Since one cannot move during sleep paralysis, 
-                                the "being trapped in one's own body" should also be visually represented. To achieve an intense effect, the goal was to 
-                                link the graphic project and the audio project. </p>
+                  <h1><b>A_WEIRD_MORNING</b></h1>
+                            <h2>by_Johanna_Hartmann </h2>
+                            <h3>Graphics: Origami Clouds</h3>
+                                <p>For the graphics project, I started by subdividing the triangles of the cube and extruding the new vertices. Looking at 
+                                  these new shapes, I felt like I was looking into clouds - origami clouds. Building on that, I continued to develop the clouds. 
+                                  Now the clouds morph into new shapes, just like real clouds do. The basic shape is a cube. The triangles from this cube are 
+                                  then subdivided, saved as new vertices and faces, and extruded. This process is done muliple times, and each new shape is 
+                                  stored as a morph target for the origami clouds. In the loop, the clouds then morph between the different target shapes 
+                                  depending on a counter that grows with each frame.  The shapes are never fully reached; the vertices only go "halfway" 
+                                  toward a target. One shape of this is the cube, so you see the clouds approaching a cube from time to time. In the code a 
+                                  bit of documentation is included. I implemented the origami clouds in three Js. For the subdivision of the triangles I used 
+                                  the Geometry class, which is very similar to p5 Geometry. I have to admit that this class is now deprecated in three.js 
+                                  (since two weeks) and in the new version only BufferGeometry is included, so my code works only until the given version of 
+                                  three.js (0.124.0). After subdividing the triangles, the clouds are converted to a BufferGeometry, so the morphing is done 
+                                  with that. To enhance the feeling of clouds further, I followed a tutorial to create a low poly terrain and used the code 
+                                  of that tutorials (Terrain.js), so the majority of my work were the clouds. 
+                                  The Low Poly shape of the terrain supports the abstract clouds, that don’t look like real clouds, but behave like ones. 
+                                  They change their shape, you can see through them from time to time and they remind you of something else. To further enhance 
+                                  this and be creative, it is possible to change the color of the clouds. As a color scheme, I chose a blue palette to create 
+                                  a moody atmosphere. It looks like the end of the night - it is still dark outside, but you can already see some colors and 
+                                  shapes, just before the sun starts rising. After looking into those origami clouds, the morning starts. A weird morning...  </p>
+                            <h3>Audio: a weird muesli morning</h3>
+                                <p>My idea was to create a morning feeling with the piece, using only sounds recorded while making cereal. It starts with a 
+                                  quiet, strange sound. More and more sounds emerge and it becomes a bit more abstract. The sounds build up for a while until 
+                                  the noises stop and all you hear is the loud scraping of the spoon. From then on, a second, more rhythmic part kicks in. This 
+                                  is supposed to be the more active part of the morning, where you get into your routine and just act. From time to time the 
+                                  rhythm is interrupted by something slightly unexpected - like a real morning. Towards the end, the rhythm is interrupted 
+                                  more and more and turns into a strange, broken sound. At the end, all you hear is a slamming and the sad sound of a scraping 
+                                  spoon. This is the moment when you close the door and start the day. For my piece music concrète, I recorded sounds made while 
+                                  eating cereal in the morning. I didn't use any food sounds. Instead, I tried to capture all the other sounds that might not be 
+                                  so obvious. These included throwing cereal into a bowl, shaking it in the box, using different types and different textures of 
+                                  cereal, including muesli and oats. I recorded a 'clink' sound that a cereal made when it touched the ceramic bowl. I also 
+                                  recorded the opening of a milk bottle, the scratching of the surface of the bowl with a spoon, the pouring of milk around 
+                                  the cereal, the closing of the fridge and a voice that occurred randomly during the recording (the "aaahhh" sound). I cut these 
+                                  samples into small pieces and selected the most appropriate ones. I removed the noise that was in the background with EQ 
+                                  subtraction. I also pitched some sounds and added reverb to the sound. For the drum part, I pitched the sounds and cut 
+                                  them to have the appropriate diamond shape. From the pling sound, I created a virtual MIDI controller and played some 
+                                  semi-harmonic keys. I experimented with putting the sounds together in different ways to create this abstract to rhythmic 
+                                  to abstract story. I also added automation to most of the samples and mixed the channels so that a spatial sound developed. 
+                                  All in all, the process was challenging for me as I had no previous experience of producing such a song and it was difficult 
+                                  to get the samples where I wanted them. </p>
+                            <h3>Learnings and reflection</h3>
+                                <p>Especially the audio project was challenging to me, since I had only a limited experience with audio production before. 
+                                  It was also a learning process to explore how I can work with my own recordings and how to capture the sounds in a good way. 
+                                  The piece is very experimental and as was the process.  I had more experience with graphics, but three.js was new to me. I learned 
+                                  how to work with vertices, faces and normals in the Geometry and the BufferGeometry class. It was frustrating when I updated my three 
+                                  js version and everything stopped working, because the Geometry Class was removed from core in the update. I already spent a lot of 
+                                  time on writing the OrigamiCloud.js file, so I decided to stick to my code and just use the old three.js version. For the future it 
+                                  would have been better to just use the BufferGeometry Class for everything from the beginning, but it is less intuitive than the 
+                                  Geometry Class, which I why I decided to use this for the triangle subdivision algorithm in the first place.In the end I am happy 
+                                  with the result and have some ideas how I could further evolve the graphics project (moving the clouds, adding sound, moving the 
+                                  terrain, making a gradient sky,… ), that I could work on given more time. </p>
         </div>
        
 
