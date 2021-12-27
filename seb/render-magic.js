@@ -21,8 +21,8 @@ function preload(){
     console.log("Preload", window.performance.now())
     myShader = loadShader('shaders/shader.vert', 'shaders/shader.frag');
     depthShader = loadShader('shaders/shader.vert', 'shaders/depth.frag');
-    mySound = loadSound('resources/winds_of_kyoto.mp3');
-    vorschau = loadImage('../assets/seb.png');
+    mySound = loadSound('../assets/seb_sound.mp3');
+    vorschau = loadImage('../assets/seb-min.png');
 }
 
 function setup(){

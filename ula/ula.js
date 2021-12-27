@@ -13,9 +13,9 @@ let f = 0;
 
 function preload() {
   bg_load = true;
-  vorschau = loadImage('../assets/ula.png');
+  vorschau = loadImage('../assets/ula-min.png');
   //bg = loadImage('./platzhalter.png');
-  song = loadSound('./SWARM.mp3');
+  song = loadSound('../assets/ula_sound.mp3');
 }
 
 function setup() {

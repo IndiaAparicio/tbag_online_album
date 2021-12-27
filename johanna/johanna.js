@@ -6,8 +6,8 @@ let soundOn = false;
 
 function preload() {
   //bg_load = true;
-  bg = loadImage('./img/origamiclouds.png');
-  song = loadSound('./a_weird_morning.mp3');
+  bg = loadImage('../assets/johanna-min.png');
+  song = loadSound('../assets/johanna_sound.mp3');
 }
 
 function setup() {

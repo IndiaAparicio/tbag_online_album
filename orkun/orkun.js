@@ -1,5 +1,5 @@
 let bg;
-let song;
+let song, song2;
 let clientWidth;
 let clientHeight;
 let soundOn = false;
@@ -31,10 +31,10 @@ var waterColors = [];
 
 function preload() {
   bg_load = true;
-  vorschau = loadImage('../assets/orkun.png');
+  vorschau = loadImage('../assets/orkun-min.png');
   //bg = loadImage('./platzhalter.png');
-  song = loadSound('./assets/Gris.mp3');
-  song2 = loadSound('./assets/waves.mp3');
+  //song=loadSound('./assets/Gris.mp3');
+  song2 = loadSound('../assets/orkun_sound.mp3');
   //amplitude = new p5.Amplitude(); 
 }
 
@@ -151,11 +151,11 @@ function draw() {
 function mousePressed() {
     if (song.isPlaying()) {
       // .isPlaying() returns a boolean
-      song.stop();
+      //song.stop();
       song2.stop();
       vorschau_klick = true;
     } else {
-      song.play();
+      //song.play();
       song2.setVolume(0.09);
       song2.play();
       vorschau_klick = false;

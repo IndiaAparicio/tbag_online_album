@@ -17,23 +17,23 @@ function preload() {
  //rect(0,0,100,100);
  font = loadFont('./assets/Montserrat-Black.ttf');
 
- img_johanna = loadImage('./assets/origamiclouds.png');
- img_india = loadImage('./assets/india.png');
- img_malte = loadImage('./assets/malte.jpeg');
- img_seb = loadImage('./assets/seb.png');
+ img_johanna = loadImage('./assets/johanna_vorschau-min.png');
+ img_india = loadImage('./assets/india_vorschau-min.png');
+ img_malte = loadImage('./assets/malte_vorschau-min.png');
+ img_seb = loadImage('./assets/seb_vorschau-min.png');
  img_sylvia = loadImage('./assets/origamiclouds.png');
- img_lucas = loadImage('./assets/vorschau.png');
- img_orkun = loadImage('./assets/orkun.png');
- img_ula = loadImage('./assets/ula.png');
+ img_lucas = loadImage('./assets/lucas-min.png');
+ img_orkun = loadImage('./assets/orkun_vorschau-min.png');
+ img_ula = loadImage('./assets/ula_vorschau-min.png');
 
- song_johanna = loadSound('./johanna/a_weird_morning.mp3');
- song_india = loadSound('./india/img/audio-project-m.mp3');
- song_malte = loadSound('./malte/malte.mp3');
- song_seb = loadSound('./seb/resources/winds_of_kyoto.mp3');
- song_sylvia = loadSound('./sylvia/slyvia.mp3');
- song_lucas = loadSound('./lucas/audio/ThoughtsInProgress.mp3');
- song_orkun = loadSound('./orkun/assets/warfare_paradise.mp3');
- song_ula = loadSound('./ula/SWARM.mp3');
+ song_johanna = loadSound('./assets/johanna_sound.mp3');
+ song_india = loadSound('./assets/india_sound.mp3');
+ song_malte = loadSound('./assets/malte_sound.mp3');
+ song_seb = loadSound('./assets/seb_sound.mp3');
+ song_sylvia = loadSound('./assets/sylvia_sound.mp3');
+ song_lucas = loadSound('./assets/lucas_sound.mp3');
+ song_orkun = loadSound('./assets/orkun_sound.mp3');
+ song_ula = loadSound('./assets/ula_sound.mp3');
  
 }
 
@@ -183,7 +183,7 @@ function centerBoxes() {
           noStroke();
           fill(0,0,100);
           translate(0,-boxsize,-boxsize);
-          image(this.img,this.positionX-abstand/2,-windowHeight/2,abstand,windowHeight*2,this.img.width/2,0,abstand,windowHeight*2);
+          image(this.img,this.positionX-abstand/2,-windowHeight/2,abstand,windowHeight*1.2,this.img.width/2,0,abstand,windowHeight*2);
           //rect(this.positionX-abstand/2,-windowHeight/2, abstand,windowHeight*2);
         pop();
         push();

@@ -16,8 +16,8 @@ let vorschau_klick = true;
 
 function preload(){
   uniformsShader = loadShader('shader.vert', 'shader.frag');
-  song = loadSound('./img/audio-project-m.mp3');
-  vorschau = loadImage('../assets/india.png');
+  song = loadSound('../assets/india_sound.mp3');
+  vorschau = loadImage('../assets/india-min.png');
 }
 
 

@@ -27,7 +27,7 @@ function toggleSong(){
 function preload(){
   basicShader = loadShader('basic.vert', 'basic.frag');
   song = loadSound("audio/ThoughtsInProgress.mp3");
-  vorschau = loadImage('./img/vorschau.png');
+  vorschau = loadImage('../assets/lucas-min.png');
 }
 
 

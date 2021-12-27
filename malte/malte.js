@@ -5,8 +5,8 @@ let clientHeight;
 let soundOn = false;
 
 function preload() {
-  bg = loadImage('malte.jpeg');
-  song = loadSound('malte.mp3')
+  bg = loadImage('../assets/malte-min.png');
+  song = loadSound('../assets/malte_sound.mp3')
 }
 
 function setup() {
