@@ -6,8 +6,8 @@ let soundOn = false;
 
 function preload() {
   bg_load = true;
-  bg = loadImage('./platzhalter.png');
-  song = loadSound('./slyvia.mp3');
+  bg = loadImage('../assets/india-min.png');
+  song = loadSound('../assets/sylvia_sound.mp3');
 }
 
 function setup() {

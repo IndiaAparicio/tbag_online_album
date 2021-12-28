@@ -149,7 +149,7 @@ function draw() {
 }
 
 function mousePressed() {
-    if (song.isPlaying()) {
+    if (song2.isPlaying()) {
       // .isPlaying() returns a boolean
       //song.stop();
       song2.stop();
