@@ -21,27 +21,27 @@ function preload() {
  //rect(0,0,100,100);
  font = loadFont('./assets/Montserrat-Black.ttf');
 
- img_anna_b = loadImage('./anna_b/glitch/assets/anna_b_vorschau.png');
+ img_anna_b = loadImage('./class21/anna_b/assets/anna_b_vorschau.png');
 
- img_johanna = loadImage('./assets/johanna_vorschau-min.png');
- img_india = loadImage('./assets/india_vorschau-min.png');
- img_malte = loadImage('./assets/malte_vorschau-min.png');
- img_seb = loadImage('./assets/seb_vorschau-min.png');
- img_sylvia = loadImage('./assets/origamiclouds.png');
- img_lucas = loadImage('./assets/lucas-min.png');
- img_orkun = loadImage('./assets/orkun_vorschau-min.png');
- img_ula = loadImage('./assets/ula_vorschau-min.png');
+//  img_johanna = loadImage('./assets/johanna_vorschau-min.png');
+//  img_india = loadImage('./assets/india_vorschau-min.png');
+//  img_malte = loadImage('./assets/malte_vorschau-min.png');
+//  img_seb = loadImage('./assets/seb_vorschau-min.png');
+//  img_sylvia = loadImage('./assets/origamiclouds.png');
+//  img_lucas = loadImage('./assets/lucas-min.png');
+//  img_orkun = loadImage('./assets/orkun_vorschau-min.png');
+//  img_ula = loadImage('./assets/ula_vorschau-min.png');
 
- song_johanna = loadSound('./assets/johanna_sound.mp3');
- song_india = loadSound('./assets/india_sound.mp3');
- song_malte = loadSound('./assets/malte_sound.mp3');
- song_seb = loadSound('./assets/seb_sound.mp3');
- song_sylvia = loadSound('./assets/sylvia_sound.mp3');
- song_lucas = loadSound('./assets/lucas_sound.mp3');
- song_orkun = loadSound('./assets/orkun_sound.mp3');
- song_ula = loadSound('./assets/ula_sound.mp3');
+//  song_johanna = loadSound('./assets/johanna_sound.mp3');
+//  song_india = loadSound('./assets/india_sound.mp3');
+//  song_malte = loadSound('./assets/malte_sound.mp3');
+//  song_seb = loadSound('./assets/seb_sound.mp3');
+//  song_sylvia = loadSound('./assets/sylvia_sound.mp3');
+//  song_lucas = loadSound('./assets/lucas_sound.mp3');
+//  song_orkun = loadSound('./assets/orkun_sound.mp3');
+//  song_ula = loadSound('./assets/ula_sound.mp3');
 
- song_anna_b = loadSound('./anna_b/glitch/assets/glitchFollows.mp3');
+ song_anna_b = loadSound('./class21/anna_b/assets/glitchFollows.mp3');
  
 }
 
@@ -57,19 +57,19 @@ function setup() {
     positionText = -windowHeight/8;
 
     //Create all Projects as an Object
-    india = new BoxProject(0,boxsize,"SLEEP_PARALYSIS", "by_India_Aparicio", img_india, song_india, './india/india.html');
-    malte = new BoxProject(0,boxsize,"S2_NACH_BERNAU", "by_Malte_Hillebrand", img_malte, song_malte, './malte/malte.html');
-    lucas = new BoxProject(0,boxsize,"THOUGHTS_IN_PROGRESS", "by_Lucas_Grey", img_lucas, song_lucas, './lucas/lucas.html');
-    ula = new BoxProject(0,boxsize,"SWARM", "by_Ula_Przybylska", img_ula, song_ula, './ula/ula.html');
-    sylvia = new BoxProject(0,boxsize,"ALIEN_SWAMP", "by_Sylvia_Rybak", img_sylvia, song_sylvia, './sylvia/sylvia.html');
-    orkun = new BoxProject(0,boxsize,"WARFARE_PARADISE", "by_Orkun_Aydinli", img_orkun, song_orkun, './orkun/orkun.html');
-    johanna = new BoxProject(0,boxsize,"A_WEIRD_MORNING", "by_Johanna_Hartmann", img_johanna, song_johanna, './johanna/johanna.html');
-    seb = new BoxProject(0,boxsize,"WINDS_OF_KYOTO", "by_Sebastian_Wilhelm",img_seb, song_seb, './seb/seb.html');
+    // india = new BoxProject(0,boxsize,"SLEEP_PARALYSIS", "by_India_Aparicio", img_india, song_india, './india/india.html');
+    // malte = new BoxProject(0,boxsize,"S2_NACH_BERNAU", "by_Malte_Hillebrand", img_malte, song_malte, './malte/malte.html');
+    // lucas = new BoxProject(0,boxsize,"THOUGHTS_IN_PROGRESS", "by_Lucas_Grey", img_lucas, song_lucas, './lucas/lucas.html');
+    // ula = new BoxProject(0,boxsize,"SWARM", "by_Ula_Przybylska", img_ula, song_ula, './ula/ula.html');
+    // sylvia = new BoxProject(0,boxsize,"ALIEN_SWAMP", "by_Sylvia_Rybak", img_sylvia, song_sylvia, './sylvia/sylvia.html');
+    // orkun = new BoxProject(0,boxsize,"WARFARE_PARADISE", "by_Orkun_Aydinli", img_orkun, song_orkun, './orkun/orkun.html');
+    // johanna = new BoxProject(0,boxsize,"A_WEIRD_MORNING", "by_Johanna_Hartmann", img_johanna, song_johanna, './johanna/johanna.html');
+    // seb = new BoxProject(0,boxsize,"WINDS_OF_KYOTO", "by_Sebastian_Wilhelm",img_seb, song_seb, './seb/seb.html');
 
-    anna_b = new BoxProject(0, boxsize, "GLITCH", "by_Anna_Brauwers", img_anna_b, song_anna_b, './anna_b/anna_b.html');
+    anna_b = new BoxProject(0, boxsize, "GLITCH", "by_Anna_Brauwers", img_anna_b, song_anna_b, './class21/anna_b/anna_b.html');
 
     //Put all Projects in an array
-    alleProjekte = [india, malte, lucas, ula, sylvia, orkun, johanna, seb, anna_b];
+    alleProjekte = [anna_b];
   
 
     //FONT

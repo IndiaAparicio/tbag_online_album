@@ -97,6 +97,13 @@ function draw() {
       textSize(fontSize/5);
       fill(255);
       text('Class_2020', -windowWidth/2.4, -windowHeight/2.4,0);
+      if(mouseX > windowWidth-200 && mouseY > windowHeight-80){
+        fill(0,0,255);
+        text('Go_To_Class_2021-->', windowWidth/2.4, windowHeight/2.4,0);
+        if(mouseIsPressed){
+          window.location = "./index_class21.html"
+        }
+      }
       text('Go_To_Class_2021-->', windowWidth/2.4, windowHeight/2.4,0);
    }else{
       fill(255);

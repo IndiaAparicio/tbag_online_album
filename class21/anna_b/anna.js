@@ -1,5 +1,4 @@
 
-
 let shader;
 let glitch;
 
@@ -21,16 +20,24 @@ let currentTime;
 let final;
 function preload() {
   
-  shader = loadShader("glitch/common.vert", "glitch/shaer.frag");
-  glitch = loadShader('glitch/glitch.vert','glitch/glitch.frag');
-  song = loadSound('glitch/assets/glitchFollows.mp3');
+  shader = loadShader("./common.vert", "./shaer.frag");
+  glitch = loadShader('./glitch.vert','./glitch.frag');
+  song = loadSound('./assets/glitchFollows.mp3');
   
 }
 
 function setup() {
+
+    let clientWidth = document.getElementById('cnv-sketch').clientWidth;
+  let clientHeight = windowHeight * 0.85;
+  let cnv = createCanvas(clientWidth -10,clientHeight, WEBGL);
+  cnv.parent('cnv-sketch');
+
+
   pixelDensity(1);
-  canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-  canvas.GL.getExtension('OES_standard_derivatives');
+  //canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+  //canvas.GL.getExtension('OES_standard_derivatives');
+  cnv.GL.getExtension('OES_standard_derivatives');
 
   blob = createGraphics(windowWidth, windowHeight, WEBGL);
   blob.shader(shader);
