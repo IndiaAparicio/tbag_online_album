@@ -6,13 +6,13 @@ let heightMusicVisualizer = 100;
 
 
 let font, fontSize;
-let anna_b;
-let india, malte, sylvia, lucas, orkun, ula, johanna, seb;
-let img_anna_b;
-let img_johanna, img_india, img_orkun, img_sylvia, img_seb, img_lucas, img_ula, img_malte;
+let bsp_projekt, anna_b;
+//let india, malte, sylvia, lucas, orkun, ula, johanna, seb;
+let img_bsp_projekt, img_anna_b;
+//let img_johanna, img_india, img_orkun, img_sylvia, img_seb, img_lucas, img_ula, img_malte;
 
-let song_anna_b;
-let song_johanna, song_india, song_orkun, song_sylvia, song_seb, song_lucas, song_ula, song_malte;
+let song_bsp_projekt, song_anna_b;
+//let song_johanna, song_india, song_orkun, song_sylvia, song_seb, song_lucas, song_ula, song_malte;
 let alleProjekte = [];
 let startWebsite = false;
 let readyForLink = false;
@@ -21,6 +21,8 @@ function preload() {
  //rect(0,0,100,100);
  font = loadFont('./assets/Montserrat-Black.ttf');
 
+
+ img_bsp_projekt = loadImage('./assets/india.png');
  img_anna_b = loadImage('./class21/anna_b/assets/anna_b_vorschau.png');
 
 //  img_johanna = loadImage('./assets/johanna_vorschau-min.png');
@@ -41,6 +43,7 @@ function preload() {
 //  song_orkun = loadSound('./assets/orkun_sound.mp3');
 //  song_ula = loadSound('./assets/ula_sound.mp3');
 
+ song_bsp_projekt = loadSound('./assets/india_sound.mp3');
  song_anna_b = loadSound('./class21/anna_b/assets/glitchFollows.mp3');
  
 }
@@ -65,8 +68,9 @@ function setup() {
     // orkun = new BoxProject(0,boxsize,"WARFARE_PARADISE", "by_Orkun_Aydinli", img_orkun, song_orkun, './orkun/orkun.html');
     // johanna = new BoxProject(0,boxsize,"A_WEIRD_MORNING", "by_Johanna_Hartmann", img_johanna, song_johanna, './johanna/johanna.html');
     // seb = new BoxProject(0,boxsize,"WINDS_OF_KYOTO", "by_Sebastian_Wilhelm",img_seb, song_seb, './seb/seb.html');
-
+    bsp_projekt = new BoxProject(0, boxsite, "BEISPIEL", "by_Maxi_Mustermensch", img_bsp_projekt, song_bsp_projekt, './bsp_projekt.html');
     anna_b = new BoxProject(0, boxsize, "GLITCH", "by_Anna_Brauwers", img_anna_b, song_anna_b, './class21/anna_b/anna_b.html');
+
 
     //Put all Projects in an array
     alleProjekte = [anna_b];
@@ -106,8 +110,15 @@ function draw() {
       pop();
       textSize(fontSize/5);
       fill(255);
-      text('Class_2020', -windowWidth/2.4, -windowHeight/2.4,0);
-      text('Go_To_Class_2021-->', windowWidth/2.4, windowHeight/2.4,0);
+      text('Class_2021', -windowWidth/2.4, -windowHeight/2.4,0);
+      if(mouseX > windowWidth-200 && mouseY > windowHeight-80){
+        fill(0,0,255);
+        text('Go_To_Class_2020-->', windowWidth/2.4, windowHeight/2.4,0);
+        if(mouseIsPressed){
+          window.location = "./index.html"
+        }
+      }
+      text('Go_To_Class_2020-->', windowWidth/2.4, windowHeight/2.4,0);
    }else{
       fill(255);
       text('Click_to_start', 0, 0,0);
