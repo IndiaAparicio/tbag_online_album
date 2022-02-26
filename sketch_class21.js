@@ -68,8 +68,8 @@ function setup() {
     // orkun = new BoxProject(0,boxsize,"WARFARE_PARADISE", "by_Orkun_Aydinli", img_orkun, song_orkun, './orkun/orkun.html');
     // johanna = new BoxProject(0,boxsize,"A_WEIRD_MORNING", "by_Johanna_Hartmann", img_johanna, song_johanna, './johanna/johanna.html');
     // seb = new BoxProject(0,boxsize,"WINDS_OF_KYOTO", "by_Sebastian_Wilhelm",img_seb, song_seb, './seb/seb.html');
-    bsp_projekt = new BoxProject(0, boxsite, "BEISPIEL", "by_Maxi_Mustermensch", img_bsp_projekt, song_bsp_projekt, './bsp_projekt.html');
-    anna_b = new BoxProject(0, boxsize, "GLITCH", "by_Anna_Brauwers", img_anna_b, song_anna_b, './class21/anna_b/anna_b.html');
+    bsp_projekt = new BoxProject(0, boxsize, "BEISPIEL", "by_Maxi_Mustermensch", img_bsp_projekt, song_bsp_projekt, './bsp_projekt.html');
+    anna_b = new BoxProject(0, boxsize, "GLITCH", "by_Anna_Brauwers", img_anna_b, song_anna_b, './class21/anna_b/anna_bsp.html');
 
 
     //Put all Projects in an array
