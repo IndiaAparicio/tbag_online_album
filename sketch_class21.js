@@ -6,12 +6,12 @@ let heightMusicVisualizer = 100;
 
 
 let font, fontSize;
-let bsp_projekt, anna_b;
+let bsp_projekt, anna_b, marco_w;
 //let india, malte, sylvia, lucas, orkun, ula, johanna, seb;
-let img_bsp_projekt, img_anna_b;
+let img_bsp_projekt, img_anna_b, img_marco_w;
 //let img_johanna, img_india, img_orkun, img_sylvia, img_seb, img_lucas, img_ula, img_malte;
 
-let song_bsp_projekt, song_anna_b;
+let song_bsp_projekt, song_anna_b, song_marco_w;
 //let song_johanna, song_india, song_orkun, song_sylvia, song_seb, song_lucas, song_ula, song_malte;
 let alleProjekte = [];
 let startWebsite = false;
@@ -24,6 +24,7 @@ function preload() {
 
  img_bsp_projekt = loadImage('./assets/india.png');
  img_anna_b = loadImage('./class21/anna_b/assets/anna_b_vorschau.png');
+ img_marco_w = loadImage('./class21/marco_w/assets/preview.png');
 
 //  img_johanna = loadImage('./assets/johanna_vorschau-min.png');
 //  img_india = loadImage('./assets/india_vorschau-min.png');
@@ -45,6 +46,7 @@ function preload() {
 
  song_bsp_projekt = loadSound('./assets/india_sound.mp3');
  song_anna_b = loadSound('./class21/anna_b/assets/glitchFollows.mp3');
+ song_marco_w = loadSound('./class21/marco_w/assets/marco_w.mp3');
  
 }
 
@@ -69,11 +71,12 @@ function setup() {
     // johanna = new BoxProject(0,boxsize,"A_WEIRD_MORNING", "by_Johanna_Hartmann", img_johanna, song_johanna, './johanna/johanna.html');
     // seb = new BoxProject(0,boxsize,"WINDS_OF_KYOTO", "by_Sebastian_Wilhelm",img_seb, song_seb, './seb/seb.html');
     bsp_projekt = new BoxProject(0, boxsize, "BEISPIEL", "by_Maxi_Mustermensch", img_bsp_projekt, song_bsp_projekt, './bsp_projekt.html');
+    
     anna_b = new BoxProject(0, boxsize, "GLITCH", "by_Anna_Brauwers", img_anna_b, song_anna_b, './class21/anna_b/anna_bsp.html');
-
+    marco_w = new BoxProject(0, boxsize, "SEADIS'_THEME", "by_Marco_Winter", img_marco_w, song_marco_w, './class21/anna_b/marco_w.html');
 
     //Put all Projects in an array
-    alleProjekte = [anna_b];
+    alleProjekte = [bsp_projekt, anna_b, marco_w];
   
 
     //FONT
