@@ -76,7 +76,8 @@ function setup() {
     
     anna_b = new BoxProject(0, boxsize, "GLITCH", "by_Anna_Brauwers", img_anna_b, song_anna_b, './class21/anna_b/anna_bsp.html');
     marco_w = new BoxProject(0, boxsize, "SEADIS'_THEME", "by_Marco_Winter", img_marco_w, song_marco_w, './class21/anna_b/marco_w.html');
-    marco_b = new BoxProject(0, boxsize, "DARK_CHAOS", "by_Marco_Braune", img_marco_b, song_marco_b, './class21/marco_b/marco_b.html');
+    marco_b = new BoxProject(0, boxsize, "DARK_CHAOS", "by_Marco_Braune", img_marco_b, song_marco_b, './class21/marco_b/marco_b.html'); 
+    
 
     //Put all Projects in an array
     alleProjekte = [bsp_projekt, anna_b, marco_w, marco_b];
