@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>online album</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+
+    
+    <script src="https://kit.fontawesome.com/62d2281714.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+    <script src="../../libraries/p5.min.js"></script>
+    <script src="../../libraries/p5.sound.min.js"></script>
+    
+  </head>
+
+
+  <body>
+    
+    <div class="container">
+   
+      <a href="../../index_class21.html"><i id="arrow-back" class="fas fa-arrow-left"></i></a>
+      
+      <div class="row"> 
+            <div id="cnv-sketch" class="col-md-8">
+                <script src="./tillman_s.js"></script>
+            </div>
+            <div class="col-md-4">
+                  <h1><b>NO_NAME</b></h1>
+                            <h2> by_Tillman_Schaeuble </h2>
+                            <h3>Brief Outline</h3>
+                                <p>With this project, you are given basic control over the movement of a snake through its environment. Pressing and holding any key, incites the snake to glide through a calm and mysterious sea of spheres, the colours of which respond to the accompanying audio track. 
+                                </p>
+                            <h3>Technical Choices</h3>
+                                <p>The scene comprises of three main elements, the snake the spheres and the soundtrack.
+                                  I wanted to create the globes as a class, which would allow me to have more control over how they behaved by enabling their own functions namely update() and move(), as well as how they were drawn into the scene.
+                                  <br><br>
+                                  For drawing the spheres, I initially used a regular array, but ran into troubles that stemmed from the requirement of an array to have the amount of elements predefined. This created unnecessary constraints.
+                                  To circumnavigate this, @timrumpf suggested that I use an ArrayList, which would enable me to add and remove spheres dynamically within the draw() call.
+                                  <br><br>
+                                  The color of the spheres react to the average and smoothed amplitude of all frequences of the FFT analyzer.
+                                  Using HSB colour mode allowed me to map the resultant FFT sum variable to the hue value in a full cycle from 0-360. This meant that the colour changes follow a smooth and continuous gradient of change through the colour spectrum and do not "reset".
+                                  <br><br>
+                                  The snakes animation and movement through the scene, as well as music volume is controlled via the amp variable, which stems from a function I made to increase or decrease dependant on whether a key is held down or not. Using this variable to modulate multiple aspects of the scene, allowed for the entire scene to feel more homogenous.
+                                  <br><br>
+                                  The soundtrack was made in Cubase by playing synthesized bells into a plugin called "Primal Tap", which allows you to freeze the delayed audio signal. Once frozen, the audio signal can be pitched up or down, resulting in pitch shift and time stretching / compression. Three different takes are pitched at octave intervals to create tonal separation and therein melodic / harmonic clarity. I knew I wanted the soundtrack to loop, so care was given to space the different layers out in a way that was structurally balanced, no matter where you begun in the loop.
+                                </p>
+                            <h3>Artistic Intention</h3>
+                                <p>Overall, I wanted the user to feel a sense of calm brought about through the smooth, cyclical movement of the snake, as well as the abstract visual and auditory environment it drifts through.
+                                  The music, with its absense of definitive rhythmic or tonal structure, augments this feeling of calm. Without a rhythm or tonal direction to grasp onto, it becomes hard to uncover hints of a beginning, middle and an end. Absent of this, the experience can become more calming, as it then stands to represent endlessness.
+                                </p>
+                            <h3>Learnings and Reflection</h3>
+                                <p>I definitely learned some new technical processes, such as array lists, sound integration and how to use classes properly. But the majority of the learning epxerience was more to do with the semesters learnings both in TBAG and CC being greatly solidified.
+                                  I felt that many difficulties I had with coding became demystified. Even throughout this project itself, the process of having an idea, considering how to implement it with code, trying it, troubleshooting and researching it - to then arriving at functioning code - became smoother and incorperated less steps as time went on.
+                                  
+                                  I was also pleasently surprised how organic the creative process can be when coding. The progression from the initial mountains / valleys idea to the drifting snake, was one of unforced, natural progression through inspiration and happy accidents. Experiencing this natural flow, has helped entice me further into this whole world!
+                                </p>
+        </div>
+       
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Call Blocking scripts at the end of body to avoid HTML Rendering problems -->
+    
+    
+    
+    
+  </body>
+</html>

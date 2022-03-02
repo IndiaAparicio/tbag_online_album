@@ -6,13 +6,10 @@ let heightMusicVisualizer = 100;
 
 
 let font, fontSize;
-let bsp_projekt, anna_b, marco_w, marco_b;
-//let india, malte, sylvia, lucas, orkun, ula, johanna, seb;
-let img_bsp_projekt, img_anna_b, img_marco_w, img_marco_b;
-//let img_johanna, img_india, img_orkun, img_sylvia, img_seb, img_lucas, img_ula, img_malte;
+let anna_b, marco_w, marco_b, marton_g, jonathan_h, andreea_m, tim_r, tillman_s, jannis_v, vivien_s;
+let img_anna_b, img_marco_w, img_marco_b, img_marton_g, img_jonathan_h, img_tim_r, img_tillman_s, img_jannis_v, img_vivien_s, img_andreea_m;
+let song_anna_b, song_marco_w, song_marco_b, song_marton_g, song_jonathan_h, song_tim_r, song_tillman_s, song_jannis_v, song_vivien_s, song_andreea_m;
 
-let song_bsp_projekt, song_anna_b, song_marco_w, song_marco_b;
-//let song_johanna, song_india, song_orkun, song_sylvia, song_seb, song_lucas, song_ula, song_malte;
 let alleProjekte = [];
 let startWebsite = false;
 let readyForLink = false;
@@ -21,34 +18,27 @@ function preload() {
  //rect(0,0,100,100);
  font = loadFont('./assets/Montserrat-Black.ttf');
 
-
- img_bsp_projekt = loadImage('./assets/india.png');
  img_anna_b = loadImage('./class21/anna_b/assets/anna_b_vorschau.png');
  img_marco_w = loadImage('./class21/marco_w/assets/preview.png');
- img_marco_b = loadImage('./class21/marco_b/assets/Preview.png')
+ img_marco_b = loadImage('./class21/marco_b/assets/Preview.png');
+ img_marton_g= loadImage('./class21/marco_b/assets/Preview.png');
+ img_jonathan_h = loadImage('./class21/marco_b/assets/Preview.png');
+ img_tim_r = loadImage('./class21/marco_b/assets/Preview.png');
+ img_tillman_s = loadImage('./class21/marco_b/assets/Preview.png');
+ img_jannis_v = loadImage('./class21/marco_b/assets/Preview.png');
+ img_andreea_m = loadImage('./class21/marco_b/assets/Preview.png');
+ img_vivien_s = loadImage('./class21/marco_b/assets/Preview.png');
 
-//  img_johanna = loadImage('./assets/johanna_vorschau-min.png');
-//  img_india = loadImage('./assets/india_vorschau-min.png');
-//  img_malte = loadImage('./assets/malte_vorschau-min.png');
-//  img_seb = loadImage('./assets/seb_vorschau-min.png');
-//  img_sylvia = loadImage('./assets/origamiclouds.png');
-//  img_lucas = loadImage('./assets/lucas-min.png');
-//  img_orkun = loadImage('./assets/orkun_vorschau-min.png');
-//  img_ula = loadImage('./assets/ula_vorschau-min.png');
-
-//  song_johanna = loadSound('./assets/johanna_sound.mp3');
-//  song_india = loadSound('./assets/india_sound.mp3');
-//  song_malte = loadSound('./assets/malte_sound.mp3');
-//  song_seb = loadSound('./assets/seb_sound.mp3');
-//  song_sylvia = loadSound('./assets/sylvia_sound.mp3');
-//  song_lucas = loadSound('./assets/lucas_sound.mp3');
-//  song_orkun = loadSound('./assets/orkun_sound.mp3');
-//  song_ula = loadSound('./assets/ula_sound.mp3');
-
- song_bsp_projekt = loadSound('./assets/india_sound.mp3');
  song_anna_b = loadSound('./class21/anna_b/assets/glitchFollows.mp3');
  song_marco_w = loadSound('./class21/marco_w/assets/marco_w.mp3');
  song_marco_b = loadSound('./class21/marco_b/assets/TBAG_DarkChaos-Track.mp3');
+ song_marton_g = loadSound('./class21/marco_b/assets/TBAG_DarkChaos-Track.mp3');
+ song_jonathan_h = loadSound('./class21/marco_b/assets/TBAG_DarkChaos-Track.mp3');
+ song_tim_r = loadSound('./class21/marco_b/assets/TBAG_DarkChaos-Track.mp3');
+ song_tillman_s = loadSound('./class21/marco_b/assets/TBAG_DarkChaos-Track.mp3');
+ song_jannis_v = loadSound('./class21/marco_b/assets/TBAG_DarkChaos-Track.mp3');
+ song_andreea_m = loadSound('./class21/marco_b/assets/TBAG_DarkChaos-Track.mp3');
+ song_vivien_s = loadSound('./class21/marco_b/assets/TBAG_DarkChaos-Track.mp3');
  
 }
 
@@ -63,24 +53,20 @@ function setup() {
     positionCubes = windowHeight/10;
     positionText = -windowHeight/8;
 
-    //Create all Projects as an Object
-    // india = new BoxProject(0,boxsize,"SLEEP_PARALYSIS", "by_India_Aparicio", img_india, song_india, './india/india.html');
-    // malte = new BoxProject(0,boxsize,"S2_NACH_BERNAU", "by_Malte_Hillebrand", img_malte, song_malte, './malte/malte.html');
-    // lucas = new BoxProject(0,boxsize,"THOUGHTS_IN_PROGRESS", "by_Lucas_Grey", img_lucas, song_lucas, './lucas/lucas.html');
-    // ula = new BoxProject(0,boxsize,"SWARM", "by_Ula_Przybylska", img_ula, song_ula, './ula/ula.html');
-    // sylvia = new BoxProject(0,boxsize,"ALIEN_SWAMP", "by_Sylvia_Rybak", img_sylvia, song_sylvia, './sylvia/sylvia.html');
-    // orkun = new BoxProject(0,boxsize,"WARFARE_PARADISE", "by_Orkun_Aydinli", img_orkun, song_orkun, './orkun/orkun.html');
-    // johanna = new BoxProject(0,boxsize,"A_WEIRD_MORNING", "by_Johanna_Hartmann", img_johanna, song_johanna, './johanna/johanna.html');
-    // seb = new BoxProject(0,boxsize,"WINDS_OF_KYOTO", "by_Sebastian_Wilhelm",img_seb, song_seb, './seb/seb.html');
-    bsp_projekt = new BoxProject(0, boxsize, "BEISPIEL", "by_Maxi_Mustermensch", img_bsp_projekt, song_bsp_projekt, './bsp_projekt.html');
-    
     anna_b = new BoxProject(0, boxsize, "GLITCH", "by_Anna_Brauwers", img_anna_b, song_anna_b, './class21/anna_b/anna_bsp.html');
-    marco_w = new BoxProject(0, boxsize, "SEADIS'_THEME", "by_Marco_Winter", img_marco_w, song_marco_w, './class21/anna_b/marco_w.html');
+    marco_w = new BoxProject(0, boxsize, "SEADIS'_THEME", "by_Marco_Winter", img_marco_w, song_marco_w, './class21/marco_w/marco_w.html');
     marco_b = new BoxProject(0, boxsize, "DARK_CHAOS", "by_Marco_Braune", img_marco_b, song_marco_b, './class21/marco_b/marco_b.html'); 
-    
+    marton_g = new BoxProject(0, boxsize, "FLY", "by_Marton_Gasparik", img_marton_g, song_marton_g, './class21/marton_g/marton_g.html'); 
+    jonathan_h = new BoxProject(0, boxsize, "SUPER_FORMULA", "by_Jonathan_Ho", img_jonathan_h, song_jonathan_h, './class21/jonathan_h/jonathan_h.html'); 
+    tim_r = new BoxProject(0, boxsize, "FLUX", "by_Tim_Rumpf", img_tim_r, song_tim_r, './class21/tim_r/tim_r.html'); 
+    tillman_s = new BoxProject(0, boxsize, "NO_NAME", "by_Tillman_Schaeuble", img_tillman_s, song_tillman_s, './class21/tillman_s/tillman_s.html'); 
+    jannis_v = new BoxProject(0, boxsize, "ALGOL", "by_Jannis_Vol", img_jannis_v, song_jannis_v, './class21/jannis_v/jannis_v.html'); 
+    andreea_m = new BoxProject(0, boxsize, "A_TRIP_DOWN_THE_SUPERMARKET", "by_Andreea_Mircea", img_andreea_m, song_andreea_m, './class21/andreea_m/andreea_m.html'); 
+    vivien_s = new BoxProject(0, boxsize, "HEIZKRAFTWERK_MOABEAT", "by_Vivien_Schreiber", img_vivien_s, song_vivien_s, './class21/vivien_s/vivien_s.html'); 
+   
 
     //Put all Projects in an array
-    alleProjekte = [bsp_projekt, anna_b, marco_w, marco_b];
+    alleProjekte = [anna_b, marco_w, marco_b, marton_g, jonathan_h, tim_r, tillman_s, jannis_v, andreea_m, vivien_s];
   
 
     //FONT
